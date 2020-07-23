@@ -8,7 +8,7 @@ const AppStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 65px;
     background: #279092;
     padding: 5px;
   }

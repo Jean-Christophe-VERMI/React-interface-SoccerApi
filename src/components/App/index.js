@@ -10,11 +10,9 @@ import { GlobalStyles } from '../../styles/global';
 import Toggle from '../Toggle/index';
 import Navbar from '../Nav/Navbar';
 
-
+//Containers
 
 import AppStyled from './AppStyled';
-
-//Containers
 
 
 const App = () => {
