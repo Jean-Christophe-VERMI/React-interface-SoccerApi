@@ -8,6 +8,10 @@ import { GlobalStyles } from '../../styles/global';
 // Components
 // import HomePage from '../HomePage';
 import Toggle from '../Toggle/index';
+import Navbar from '../Nav/Navbar';
+
+
+
 import AppStyled from './AppStyled';
 
 //Containers
@@ -25,8 +29,13 @@ const App = () => {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <AppStyled>
-        <h1>Header</h1>
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <header className="header">
+          <div className="menu-site">
+            <Toggle theme={theme} toggleTheme={toggleTheme} />
+            <h2><a className="title-site" title="accueil" href="">ALLGOALS</a></h2>
+          </div>
+          <Navbar />
+        </header>
       </AppStyled>
     </ThemeProvider>
   );

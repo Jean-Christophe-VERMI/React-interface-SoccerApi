@@ -5,13 +5,12 @@ const ToggleStyled = styled.div`
 
   width: 2.5rem;
   height: 2.5rem;
-  padding: 1rem;
   
   .toogle-btn {
-    background-color: #53D1BA;
+    background-color: #279092;
     width: 2.5rem;
     height: 2.5rem;
-    border: 2px solid #53D1BA;
+    border: none;
     cursor: pointer;
     border-radius: 3px;
     background-image: url(${Ballon});
