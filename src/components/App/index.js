@@ -9,6 +9,7 @@ import { GlobalStyles } from '../../styles/global';
 // import HomePage from '../HomePage';
 import Toggle from '../Toggle/index';
 import Navbar from '../Nav/Navbar';
+import Main from '../Main';
 
 //Containers
 
@@ -34,6 +35,7 @@ const App = () => {
           </div>
           <Navbar />
         </header>
+        <Main />
       </AppStyled>
     </ThemeProvider>
   );
