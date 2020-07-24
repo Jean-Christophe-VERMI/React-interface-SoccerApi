@@ -10,7 +10,7 @@ const AllMatchs = ({datas}) => {
   
   return (
     <AllMatchsStyled>
-      <div className="technos">
+      <div className="matchslist">
         {datas.map((match) => (
           <Match key={match.id} {...match} />
         ))};

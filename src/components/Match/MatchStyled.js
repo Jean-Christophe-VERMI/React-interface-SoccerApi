@@ -2,12 +2,25 @@ import styled from 'styled-components';
 
 const MatchStyled = styled.div`
 
-  width: 75%;
+  width: 30%;
+  margin: 0 auto;
   padding: .5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  
+
+  .match {
+    background: #fff;
+    padding: .5rem;
+    border-radius: 5px;
+  }
+
+  .thumb {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+  }
   
 `;
 

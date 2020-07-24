@@ -14,8 +14,8 @@ const Match = ({
   
   return (
     <MatchStyled>
-      <div>
-        <div>{thumbnail}</div>
+      <div className="match">
+        <img className="thumb" title="thumbnail" src={thumbnail} />
         <p>{title}</p>
       </div>
     </MatchStyled>
