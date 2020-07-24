@@ -8,7 +8,7 @@ const MatchStyled = styled.div`
   
 
   .match {
-    background: #fff;
+    background: ${({ theme }) => theme.background};
     padding: .5rem;
     border-radius: 5px;
   }
