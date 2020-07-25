@@ -4,7 +4,7 @@ const MatchStyled = styled.div`
 
   width: 33%;
   margin: 0 auto;
-  padding: .5rem;
+  padding: .5rem 0rem;
   
 
   .match {

@@ -3,6 +3,9 @@ import React from 'react';
 // Component
 import Loading from '../Loading';
 
+//Style
+import IframeStyled from './IframeStyled';
+
 const Iframe = ({ HightLightDatas }) => {
   
 
@@ -21,7 +24,10 @@ const Iframe = ({ HightLightDatas }) => {
   };
 
   return (
-    <div dangerouslySetInnerHTML={createMarkup()} />
+    <IframeStyled>
+      <div className='iframe' dangerouslySetInnerHTML={createMarkup()} />
+    </IframeStyled>
+    
   );
 
 };
