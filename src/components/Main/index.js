@@ -14,7 +14,6 @@ const Main = ({}) => {
     const getAllMatchs = async () => {
       try {
         const response = await axios.get('https://www.scorebat.com/video-api/v1/');
-        console.log(response);
         const datas = await response.data;
         console.log(datas);
         setMatchs(datas);
