@@ -4,7 +4,6 @@ import 'moment/locale/fr';
 
 // Component 
 import ModalVideos from '../ModalVideos';
-// import Iframe from '../Iframe';
 
 // Style
 import MatchStyled from './MatchStyled';

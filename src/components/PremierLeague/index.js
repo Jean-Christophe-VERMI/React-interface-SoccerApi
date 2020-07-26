@@ -1,18 +1,18 @@
-import React from 'react';
+import React  from 'react';
 
-//Component
+// Component
 import Match from '../Match';
 import Loading from '../Loading';
 
-//Style
-import AllMatchsStyled from './allMatchsStyled';
+// Style
+import PremierLeagueStyled from './PremierLeagueStyled';
 
-const AllMatchs = ({
-  allMatchs
+const PremierLeague = ({
+  allMatchs,
 }) => {
   
   return (
-    <AllMatchsStyled>
+    <PremierLeagueStyled>
       {!allMatchs && (
         <Loading />
       )}
@@ -23,8 +23,8 @@ const AllMatchs = ({
           ))}
       </div>
       )}
-    </AllMatchsStyled>
+    </PremierLeagueStyled>
   );
 };
 
-export default AllMatchs;
+export default PremierLeague;

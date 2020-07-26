@@ -1,12 +1,16 @@
 import { connect } from 'react-redux';
 
-import Main from '../../components/Main';
+import App from '../../components/App';
 
-import { dispatchPremierLeague, dispatchLaLiga, dispatchSeriea } from '../../actions/competitions';
+import { dispatchAllMatchs, dispatchPremierLeague, dispatchLaLiga, dispatchSeriea } from '../../actions/competitions';
 
 const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = (dispatch) => ({
+
+  dispatchAllMatchs: (allMatchs) => {
+    dispatch(dispatchAllMatchs(allMatchs));
+  },
   dispatchPremierLeague: (matchsPremierLeague) => {
     dispatch(dispatchPremierLeague(matchsPremierLeague));
   },
@@ -18,4 +22,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

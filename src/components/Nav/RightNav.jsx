@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 import bplIcon from './icons/bpl.png';
@@ -28,6 +30,7 @@ const Menu = styled.div`
     margin-left: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #279092;
     margin: .3rem;
@@ -63,6 +66,7 @@ const Menu = styled.div`
 
     .menu {
       margin: .5rem auto;
+      justify-content: flex-start;
     }
 
   }
@@ -73,11 +77,11 @@ const Menu = styled.div`
 const RightNav = ({ open }) => {
   return (
     <Menu open={open}>
-      <a className="menu" href="" title="Première League"><img src={bplIcon} />Premier League</a>
-      <a className="menu" href="" title="Ligue 1"><img src={ligue1Icon} />Ligue 1</a>
-      <a className="menu" href="" title="La Liga"><img src={laligaIcon} />La Liga</a>
-      <a className="menu" href="" title="Serie A"><img src={serieaIcon} />Serie A</a>
-      <a className="menu" href="" title="BundesLiga"><img src={bundesligaIcon} />BundesLiga</a>
+      <NavLink className="menu" to='/premier-league' ><img src={bplIcon} />Premier League</NavLink>
+      <NavLink className="menu" to='/ligue-1' ><img src={ligue1Icon} />Ligue 1</NavLink>
+      <NavLink className="menu" to='/la-liga' ><img src={laligaIcon} />La Liga</NavLink>
+      <NavLink className="menu" to='/serie-a' ><img src={serieaIcon} />Serie A</NavLink>
+      <NavLink className="menu" to='/bundesliga' ><img src={bundesligaIcon} />BundesLiga</NavLink>
     </Menu>
   )
 }
