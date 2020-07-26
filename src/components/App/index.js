@@ -15,6 +15,8 @@ import Navbar from '../Nav/Navbar';
 // Containers
 import AllMatchs from '../../containers/AllMatchs';
 import PremierLeague from '../../containers/PremierLeague';
+import LaLiga from '../../containers/LaLiga';
+import SerieA from '../../containers/SerieA';
 
 // Styles
 import AppStyled from './AppStyled';
@@ -70,6 +72,8 @@ const App = ({
           <Switch>
             <Route exact path='/' component={AllMatchs} />
             <Route exact path='/premier-league' component={PremierLeague} />
+            <Route exact path='/la-liga' component={LaLiga} />
+            <Route exact path='/serie-a' component={SerieA} />
           </Switch>
         </Router>
       </AppStyled>
