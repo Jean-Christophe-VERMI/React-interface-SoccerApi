@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-// import dashboard from './dashboard';
+import premierLeague from './premierLeague';
+import laLiga from './laLiga';
+import serieA from './serieA';
 
 const persistConfig = {
   key: 'root',
@@ -10,7 +12,9 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-  // dashboard,
+  premierLeague,
+  laLiga,
+  serieA,
 });
 
 export default persistReducer(persistConfig, rootReducer);

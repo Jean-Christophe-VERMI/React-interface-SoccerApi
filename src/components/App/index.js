@@ -9,9 +9,10 @@ import { GlobalStyles } from '../../styles/global';
 // import HomePage from '../HomePage';
 import Toggle from '../Toggle/index';
 import Navbar from '../Nav/Navbar';
-import Main from '../Main';
+// import Main from '../Main';
 
 //Containers
+import Main from '../../containers/Main';
 
 import AppStyled from './AppStyled';
 

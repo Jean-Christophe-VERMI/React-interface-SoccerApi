@@ -6,7 +6,11 @@ import Loading from '../Loading';
 import AllMatchs from '../AllMatchs';
 import MainStyled from './MainStyled';
 
-const Main = ({}) => {
+const Main = ({
+  dispatchPremierLeague,
+  dispatchLaLiga,
+  dispatchSeriea,
+}) => {
 
   const [matchs, setMatchs] = useState(null);
 
@@ -17,12 +21,19 @@ const Main = ({}) => {
         const datas = await response.data;
         console.log(datas);
         setMatchs(datas);
+        const matchsPremierLeague = datas.filter((match) => match.competition.id === 15);
+        const matchsLaLiga = datas.filter((match) => match.competition.id === 14);
+        const matchsSerieA = datas.filter((match) => match.competition.id === 13);
+        dispatchLaLiga(matchsLaLiga);
+        dispatchPremierLeague(matchsPremierLeague);
+        dispatchSeriea(matchsSerieA);
       } catch (error) {
         console.log(error);
       }
     };
     getAllMatchs();
   }, []);
+  
   
   return (
     <MainStyled>
