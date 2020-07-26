@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { useDarkMode } from '../useDarkMode';
-import { lightTheme, darkTheme } from '../../styles/theme';
+import { lighttheme, darktheme } from '../../styles/theme';
 import { GlobalStyles } from '../../styles/global';
 
 // Components
@@ -35,6 +35,7 @@ const App = ({
         const response = await axios.get('https://www.scorebat.com/video-api/v1/');
         const datas = await response.data;
         console.log(datas);
+
         const matchsPremierLeague = datas.filter((match) => match.competition.id === 15);
         const matchsLaLiga = datas.filter((match) => match.competition.id === 14);
         const matchsSerieA = datas.filter((match) => match.competition.id === 13);
@@ -43,15 +44,16 @@ const App = ({
         dispatchLaLiga(matchsLaLiga);
         dispatchPremierLeague(matchsPremierLeague);
         dispatchSeriea(matchsSerieA);
+
       } catch (error) {
         console.log(error);
       }
     };
     getAllMatchs();
-  }, []);
+  });
 
   const [theme, toggleTheme, componentMounted] = useDarkMode();
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const themeMode = theme === 'light' ? lighttheme : darktheme;
 
   if (!componentMounted) {
     return <div />

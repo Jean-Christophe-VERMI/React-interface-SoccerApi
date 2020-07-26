@@ -22,7 +22,7 @@ const Match = ({
   return (
     <MatchStyled>
       <div className="match">
-        <img className="thumb" title="thumbnail" src={thumbnail} />
+        <img className="thumb" title="thumbnail" alt='thumbnail-match' src={thumbnail} />
         {Moment(date).locale('fr').format("dddd, Do MMMM YYYY")}
         <div className="match-infos">
           <h4>{title}</h4>

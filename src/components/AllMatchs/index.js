@@ -19,7 +19,7 @@ const AllMatchs = ({
       {allMatchs && (
         <div className="matchslist">
           {allMatchs.map((match) => (
-            <Match key={match.id} {...match} />
+            <Match key={match.title} {...match} />
           ))}
       </div>
       )}

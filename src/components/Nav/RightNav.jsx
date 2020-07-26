@@ -77,11 +77,11 @@ const Menu = styled.div`
 const RightNav = ({ open }) => {
   return (
     <Menu open={open}>
-      <NavLink className="menu" to='/premier-league' ><img src={bplIcon} />Premier League</NavLink>
-      <NavLink className="menu" to='/ligue-1' ><img src={ligue1Icon} />Ligue 1</NavLink>
-      <NavLink className="menu" to='/la-liga' ><img src={laligaIcon} />La Liga</NavLink>
-      <NavLink className="menu" to='/serie-a' ><img src={serieaIcon} />Serie A</NavLink>
-      <NavLink className="menu" to='/bundesliga' ><img src={bundesligaIcon} />BundesLiga</NavLink>
+      <NavLink className="menu" to='/premier-league' ><img src={bplIcon} alt='icon-premier-league' />Premier League</NavLink>
+      <NavLink className="menu" to='/ligue-1' ><img src={ligue1Icon} alt='icon-ligue-1' />Ligue 1</NavLink>
+      <NavLink className="menu" to='/la-liga' ><img src={laligaIcon} alt='icon-la-liga' />La Liga</NavLink>
+      <NavLink className="menu" to='/serie-a' ><img src={serieaIcon} alt='icon-serie-A' />Serie A</NavLink>
+      <NavLink className="menu" to='/bundesliga' ><img src={bundesligaIcon} alt='icon-bundesliga' />BundesLiga</NavLink>
     </Menu>
   )
 }
