@@ -2,7 +2,14 @@ import { connect } from 'react-redux';
 
 import App from '../../components/App';
 
-import { dispatchAllMatchs, dispatchPremierLeague, dispatchLaLiga, dispatchSeriea } from '../../actions/competitions';
+import { 
+  dispatchAllMatchs, 
+  dispatchPremierLeague, 
+  dispatchLaLiga, 
+  dispatchSeriea, 
+  dispatchLigue1,
+  dispatchBundesliga,
+ } from '../../actions/competitions';
 
 const mapStateToProps = (state) => ({});
 
@@ -19,7 +26,13 @@ const mapDispatchToProps = (dispatch) => ({
   },
   dispatchSeriea: (matchsSeriea) => {
     dispatch(dispatchSeriea(matchsSeriea));
-  }
+  },
+  dispatchLigue1: (matchsLigue1) => {
+    dispatch(dispatchLigue1(matchsLigue1));
+  },
+  dispatchBundesliga: (matchsBundesliga) => {
+    dispatch(dispatchBundesliga(matchsBundesliga));
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

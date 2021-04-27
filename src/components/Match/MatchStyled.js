@@ -15,6 +15,11 @@ const MatchStyled = styled.div`
 
     -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    &:hover {
+      background-color : #279092;
+      color : #ffffff;
+    }
   }
 
   .thumb {
@@ -29,6 +34,7 @@ const MatchStyled = styled.div`
     h4 {
       margin: 0;
     }
+
   }
 
   @media (max-width: 768px) {

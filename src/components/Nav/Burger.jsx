@@ -17,6 +17,12 @@ const StyledBurger = styled.div`
     flex-flow: column nowrap;
   }
 
+  @media (orientation: landscape) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+
   div {
     width: 2rem;
     height: 0.25rem;
@@ -51,7 +57,7 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open}/>
+      <RightNav open={open} setOpen={setOpen}/>
     </>
   )
 }

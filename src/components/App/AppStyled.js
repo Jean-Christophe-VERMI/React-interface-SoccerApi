@@ -5,6 +5,7 @@ const AppStyled = styled.div`
   .header {
     position: sticky;
     top: 0;
+    z-index: 10;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

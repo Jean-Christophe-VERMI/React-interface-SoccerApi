@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const PremierLeagueStyled = styled.div`
-  width: 90%;
+  width: 95%;
   margin: 1rem auto;
 
   .matchslist {

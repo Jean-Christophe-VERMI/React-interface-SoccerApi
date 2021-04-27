@@ -6,6 +6,8 @@ import allCompetitions from './allCompetitions';
 import premierLeague from './premierLeague';
 import laLiga from './laLiga';
 import serieA from './serieA';
+import ligue1 from './ligue1';
+import bundesliga from './bundesliga';
 
 const persistConfig = {
   key: 'root',
@@ -18,6 +20,8 @@ const rootReducer = combineReducers({
   premierLeague,
   laLiga,
   serieA,
+  ligue1,
+  bundesliga,
 });
 
 export default persistReducer(persistConfig, rootReducer);

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const LaLigaStyled = styled.div`
+const BundesligaStyled = styled.div`
 
   width: 95%;
   margin: 1rem auto;
@@ -29,4 +29,4 @@ const LaLigaStyled = styled.div`
   
 `;
 
-export default LaLigaStyled;
+export default BundesligaStyled;

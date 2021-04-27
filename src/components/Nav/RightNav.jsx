@@ -40,8 +40,7 @@ const Menu = styled.div`
 
     &:hover {
       cursor: pointer;
-      background-color: #ccc;
-      color: #fff;
+      border: 2px solid #ffffff;
     }
 
   }
@@ -70,18 +69,38 @@ const Menu = styled.div`
     }
 
   }
+
+  @media (max-width: 992px) and (orientation: landscape) {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: #279092;
+    position: fixed;
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+
+    .menu {
+      margin: .5rem auto;
+      justify-content: flex-start;
+    }
+  }
+  
   
 
 `;
 
-const RightNav = ({ open }) => {
+const RightNav = ({ open, setOpen }) => {
   return (
     <Menu open={open}>
-      <NavLink className="menu" to='/premier-league' ><img src={bplIcon} alt='icon-premier-league' />Premier League</NavLink>
-      <NavLink className="menu" to='/ligue-1' ><img src={ligue1Icon} alt='icon-ligue-1' />Ligue 1</NavLink>
-      <NavLink className="menu" to='/la-liga' ><img src={laligaIcon} alt='icon-la-liga' />La Liga</NavLink>
-      <NavLink className="menu" to='/serie-a' ><img src={serieaIcon} alt='icon-serie-A' />Serie A</NavLink>
-      <NavLink className="menu" to='/bundesliga' ><img src={bundesligaIcon} alt='icon-bundesliga' />BundesLiga</NavLink>
+      <NavLink className="menu" onClick={() => setOpen(!open)} to='/premier-league' ><img src={bplIcon} alt='icon-premier-league' />Premier League</NavLink>
+      <NavLink className="menu" onClick={() => setOpen(!open)} to='/ligue-1' ><img src={ligue1Icon} alt='icon-ligue-1' />Ligue 1</NavLink>
+      <NavLink className="menu" onClick={() => setOpen(!open)} to='/la-liga' ><img src={laligaIcon} alt='icon-la-liga' />La Liga</NavLink>
+      <NavLink className="menu" onClick={() => setOpen(!open)} to='/serie-a' ><img src={serieaIcon} alt='icon-serie-A' />Serie A</NavLink>
+      <NavLink className="menu" onClick={() => setOpen(!open)} to='/bundesliga' ><img src={bundesligaIcon} alt='icon-bundesliga' />BundesLiga</NavLink>
     </Menu>
   )
 }

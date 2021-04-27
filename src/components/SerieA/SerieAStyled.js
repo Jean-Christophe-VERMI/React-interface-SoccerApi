@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const SerieAStyled = styled.div`
 
-  width: 90%;
+  width: 95%;
   margin: 1rem auto;
 
   .matchslist {
